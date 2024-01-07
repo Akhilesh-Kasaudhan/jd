@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow: hidden;
+ } 
+ svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999999999;
+    transform: translate(-50%,-50%);
+    stroke-dashoffset: 1000px;
+    stroke-dasharray: 1000px;
+ }
+ .animate{
+    animation: animation 10s cubic-bezier(0.19, 1, 0.22, 1) both;
+ }
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: #111;
+}
+#wrapper{
+  height: 100%;
+  width: 100%;
+  background-image: url("webpageoffice.avif");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip :text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background-position: 50%;
+ background-size: contain;
+}
+.main h1{
+    color: #fff;
+    font-size: 33rem;
+    font-weight: 800;
+}
+#circle{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1.2px solid #fff;
+    background-color: transparent;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 9999999;
+}
+#whitestrip{
+    position: absolute;
+    height: 7rem;
+    width: 52%;
+    background-color: #fff;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#blackcard{
+    height: 250px;
+    width: 200px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-60%,-45%);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+#blackcard p{
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+.linelem{
+    display: flex;
+    align-items: center;
+}
+.linelem .line{
+    height: 2px;
+    width: 200px;
+    background-color: #000;
+    margin: 0 30px;
+}
+.linelem i{
+    cursor: pointer;
+}
+.main>h5{
+    font-size: 10px;
+    letter-spacing: 15px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-90deg);
+}
+@keyframes animation {
+    to{
+       stroke-dasharray:450px; 
+         
+    }
+}
